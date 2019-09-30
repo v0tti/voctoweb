@@ -20,7 +20,7 @@ module Types
       object.acronym
     end
     def lectures
-      object.events
+      object.events.becomes(Frontend::Event)
     end
     def logo_url
       object.logo

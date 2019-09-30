@@ -28,7 +28,7 @@ module Types
       argument :guid, ID, required: true
     end
     def lecture(guid:)
-      Event.find_by(guid: guid)
+      Event.find_by(guid: guid).becomes(Frontend::Event)
     end
 
   end
